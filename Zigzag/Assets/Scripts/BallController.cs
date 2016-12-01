@@ -10,14 +10,14 @@ public class BallController : MonoBehaviour {
 
 	void Awake(){
 		rb = GetComponent<Rigidbody> ();
-	
+
 	}
 	// Use this for initialization
 	void Start () {
 		started = false;
 		gameOver = false;
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 
@@ -27,8 +27,12 @@ public class BallController : MonoBehaviour {
 				started = true;
 			}
 		}
+		Debug.DrawRay (transform.position, Vector3.down, Color.red);
+
 		if (!Physics.Raycast (transform.position, Vector3.down, 1f)) {
 			gameOver = true;
+			rb.velocity = new Vector3 (0, -25f, 0);
+			Camera.main.GetComponent<CameraFollow> ().gameOver = true;
 		}
 
 		if (Input.GetMouseButtonDown (0) && !gameOver) {
