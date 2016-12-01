@@ -6,6 +6,7 @@ public class PlatformSpawner : MonoBehaviour {
 	public GameObject platform;
 	Vector3 lastPos;
 	float size;
+	public bool gameOver;
 
 	// Use this for initialization
 	void Start () {
@@ -20,10 +21,15 @@ public class PlatformSpawner : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+		if(gameOver){
+			CancelInvoke ("SpawnPlatforms");
+		}
 	}
 
 	void SpawnPlatforms(){
+		if(gameOver){
+			return;
+		}
 		int rand = Random.Range (0, 6);
 		if(rand < 3){
 			SpawnX ();
