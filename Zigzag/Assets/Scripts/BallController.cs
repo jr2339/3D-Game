@@ -27,6 +27,8 @@ public class BallController : MonoBehaviour {
 			if(Input.GetMouseButtonDown(0)){
 				rb.velocity = new Vector3 (speed, 0, 0);
 				started = true;
+
+				GameManager.instance.StartGame ();
 			}
 		}
 		Debug.DrawRay (transform.position,Vector3.down,Color.red);
@@ -35,6 +37,8 @@ public class BallController : MonoBehaviour {
 			gameOver = true;
 			rb.velocity = new Vector3 (0,-25f, 0);//fall down
 			Camera.main.GetComponent<CameraFollow>().gameOver = true;
+
+			GameManager.instance.GameOver ();
 		}
 
 		if(Input.GetMouseButtonDown(0) && !gameOver){
