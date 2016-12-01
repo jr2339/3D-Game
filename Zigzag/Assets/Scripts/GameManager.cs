@@ -29,5 +29,6 @@ public class GameManager : MonoBehaviour {
 	public void GameOver(){
 		UIManager.instance.GameOver ();
 		ScoreManger.instance.stopScore ();
+		gameOver = true;
 	}
 }

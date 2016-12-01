@@ -19,10 +19,12 @@ public class PlatformSpawner : MonoBehaviour {
 		}
 		InvokeRepeating ("SpawnPlatforms",2f,0.2f);
 	}
-	
+
+		
+
 	// Update is called once per frame
 	void Update () {
-		if(gameOver){
+		if(GameManager.instance.gameOver == true){
 			CancelInvoke ("SpawnPlatforms");
 		}
 	}
