@@ -24,7 +24,7 @@ public class UIManager : MonoBehaviour {
 	}
 	// Use this for initialization
 	void Start () {
-	
+		highScorce1.text ="High Score: " + PlayerPrefs.GetInt ("highScore");
 	}
 
 
@@ -35,6 +35,8 @@ public class UIManager : MonoBehaviour {
 	}
 
 	public void GameOver(){
+		score.text = PlayerPrefs.GetInt ("score").ToString();
+		highScorce2.text = PlayerPrefs.GetInt ("highScore").ToString();
 		gameOverPanel.SetActive (true);
 	
 	}
