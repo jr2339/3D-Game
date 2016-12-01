@@ -4,6 +4,7 @@ using System.Collections;
 public class PlatformSpawner : MonoBehaviour {
 
 	public GameObject platform;
+	public GameObject diamonds;
 	Vector3 lastPos;
 	float size;
 	public bool gameOver;
@@ -45,6 +46,12 @@ public class PlatformSpawner : MonoBehaviour {
 		pos.x += size;
 		lastPos = pos;
 		Instantiate (platform, pos, Quaternion.identity);
+
+		int rand = Random.Range (0, 4);
+		if(rand < 1){
+			Instantiate (diamonds, new Vector3(pos.x,pos.y+1,pos.z), diamonds.transform.rotation);
+		}
+
 	}
 
 	void SpawnZ(){
@@ -52,5 +59,10 @@ public class PlatformSpawner : MonoBehaviour {
 		pos.z += size;
 		lastPos = pos;
 		Instantiate (platform, pos, Quaternion.identity);
+
+		int rand = Random.Range (0, 4);
+		if(rand < 1){
+			Instantiate (diamonds, new Vector3(pos.x,pos.y+1,pos.z), diamonds.transform.rotation);
+		}
 	}
 }
