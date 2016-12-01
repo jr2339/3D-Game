@@ -12,14 +12,25 @@ public class PlatformSpawner : MonoBehaviour {
 		lastPos = platform.transform.position;
 		size = platform.transform.localScale.x;
 
-		for(int i=0; i<5;i++){
-			SpawnZ ();
+		for(int i=0; i<20;i++){
+			SpawnPlatforms ();
 		}
+		InvokeRepeating ("SpawnPlatforms",2f,0.2f);
 	}
 	
 	// Update is called once per frame
 	void Update () {
 	
+	}
+
+	void SpawnPlatforms(){
+		int rand = Random.Range (0, 6);
+		if(rand < 3){
+			SpawnX ();
+		}
+		else if(rand >= 3){
+			SpawnZ ();
+		}
 	}
 
 	void SpawnX(){
