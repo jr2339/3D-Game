@@ -2,6 +2,9 @@
 using System.Collections;
 
 public class BallController : MonoBehaviour {
+
+	public GameObject particle;
+
 	[SerializeField]
 	private float speed;
 	bool started;
@@ -50,6 +53,7 @@ public class BallController : MonoBehaviour {
 
 	void OnTriggerEnter(Collider col){
 		if(col.gameObject.tag == "Diamond"){
+			Instantiate (particle, col.gameObject.transform.position, Quaternion.identity);
 			Destroy (col.gameObject);
 		}
 	}
