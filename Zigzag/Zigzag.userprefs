@@ -1,13 +1,13 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/CameraFollow.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/BallController.cs">
     <Files>
-      <File FileName="Assets/Scripts/GameManager.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/BallController.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/GameManager.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/PlatformSpawner.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/UIManager.cs" Line="29" Column="2" />
-      <File FileName="Assets/Scripts/ScoreManger.cs" Line="35" Column="3" />
-      <File FileName="Assets/Scripts/CameraFollow.cs" Line="27" Column="1" />
+      <File FileName="Assets/Scripts/UIManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/ScoreManger.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/CameraFollow.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
